@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){	
+	int interest,Total,payment,sum,loan;
 	cout << "Enter initial loan: ";
 	cout << "Enter interest rate per year (%): ";
 	cout << "Enter amount you can pay per year: ";
@@ -18,16 +19,15 @@ int main(){
 	cout << setw(13) << left << "NewBalance";
 	cout << "\n";
 	
-	//use 'fixed' and 'setprecision' to fix the number of decimal digits for displaying
-	//you can change input argument of 'setprecision()' to see the effect
+	for(int i=0,sum<0,i++){
 	cout << fixed << setprecision(2); 
-	cout << setw(13) << left << 1; 
-	cout << setw(13) << left << 1000.0;
-	cout << setw(13) << left << 50.0;
+	cout << setw(13) << left << i; 
+	cout << setw(13) << left << Total;
+	cout << setw(13) << left << ;
 	cout << setw(13) << left << 1050.0;
 	cout << setw(13) << left << 100.0;
 	cout << setw(13) << left << 950.0;
 	cout << "\n";	
-	
+	}
 	return 0;
 }
