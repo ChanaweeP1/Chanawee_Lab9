@@ -3,14 +3,15 @@
 using namespace std;
 
 int main(){	
-	int interest,Total,payment,sum,loan;
+	double interest,Total,payment;
 	cout << "Enter initial loan: ";
+	cin >> Total;
 	cout << "Enter interest rate per year (%): ";
+	cin >> interest;
 	cout << "Enter amount you can pay per year: ";
+	cin >> payment;
 
-	//use 'setw' to set width of table and 'left' to set left-alignment
-	//you can change input argument of 'setw()' to see the effect
-	//Try to change from 'left' to 'right' and see the effect
+	
 	cout << setw(13) << left << "EndOfYear#"; 
 	cout << setw(13) << left << "PrevBalance"; 
 	cout << setw(13) << left << "Interest"; 
@@ -19,14 +20,19 @@ int main(){
 	cout << setw(13) << left << "NewBalance";
 	cout << "\n";
 	
-	for(int i=0,sum<0,i++){
+	for(int i=0;Total>0;i++){
+	
 	cout << fixed << setprecision(2); 
-	cout << setw(13) << left << i; 
+	cout << setw(13) << left << i+1; 
 	cout << setw(13) << left << Total;
-	cout << setw(13) << left << ;
-	cout << setw(13) << left << 1050.0;
-	cout << setw(13) << left << 100.0;
-	cout << setw(13) << left << 950.0;
+	cout << setw(13) << left << Total*(interest/100);
+	Total=Total+Total*(interest/100);
+	cout << setw(13) << left << Total;
+	if(Total < payment) 
+	payment = Total ;
+	cout << setw(13) << left << payment;	
+	Total=Total-payment;
+	cout << setw(13) << left << Total;
 	cout << "\n";	
 	}
 	return 0;
